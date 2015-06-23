@@ -1,0 +1,23 @@
+package:
+  name: openmm
+  version: !!str dev
+
+source:
+  git_url:  {{environ.get('SOURCE_PATH')}}
+
+  
+requirements:
+  build:
+    - cmake
+    - python
+    - fftw3f
+    - swig
+
+  run:
+    - python
+    - fftw3f
+    - numpy
+
+about:
+  home: https://simtk.org/home/openmm
+  license: GPL
