@@ -1,0 +1,84 @@
+{
+    "gbsa.track_cpu": {
+        "code": "@wraps(func)\ndef benchmark():\n    steps = 20\n    while True:\n        time = timeIntegration(context, steps, initialSteps)\n        if time >= 0.5*benchmark.seconds:\n            break\n        if time < 0.5:\n            # Integrate enough steps to get a reasonable estimate for how many we'll need.\n            steps = int(steps*1.0/time)\n        else:\n            steps = int(steps*benchmark.seconds/time)\n\n    dt = context.getIntegrator().getStepSize()\n    return round((dt*steps*86400/time).value_in_unit(unit.nanoseconds), 2)\n",
+        "name": "gbsa.track_cpu",
+        "param_names": [],
+        "params": [],
+        "timeout": 60.0,
+        "type": "track",
+        "unit": "nanoseconds / day"
+    },
+    "gbsa.track_cuda": {
+        "code": "@wraps(func)\ndef benchmark():\n    steps = 20\n    while True:\n        time = timeIntegration(context, steps, initialSteps)\n        if time >= 0.5*benchmark.seconds:\n            break\n        if time < 0.5:\n            # Integrate enough steps to get a reasonable estimate for how many we'll need.\n            steps = int(steps*1.0/time)\n        else:\n            steps = int(steps*benchmark.seconds/time)\n\n    dt = context.getIntegrator().getStepSize()\n    return round((dt*steps*86400/time).value_in_unit(unit.nanoseconds), 2)\n",
+        "name": "gbsa.track_cuda",
+        "param_names": [],
+        "params": [],
+        "timeout": 60.0,
+        "type": "track",
+        "unit": "nanoseconds / day"
+    },
+    "gbsa.track_opencl": {
+        "code": "@wraps(func)\ndef benchmark():\n    steps = 20\n    while True:\n        time = timeIntegration(context, steps, initialSteps)\n        if time >= 0.5*benchmark.seconds:\n            break\n        if time < 0.5:\n            # Integrate enough steps to get a reasonable estimate for how many we'll need.\n            steps = int(steps*1.0/time)\n        else:\n            steps = int(steps*benchmark.seconds/time)\n\n    dt = context.getIntegrator().getStepSize()\n    return round((dt*steps*86400/time).value_in_unit(unit.nanoseconds), 2)\n",
+        "name": "gbsa.track_opencl",
+        "param_names": [],
+        "params": [],
+        "timeout": 60.0,
+        "type": "track",
+        "unit": "nanoseconds / day"
+    },
+    "heavy_hydrogen_pme.track_cpu": {
+        "code": "@wraps(func)\ndef benchmark():\n    steps = 20\n    while True:\n        time = timeIntegration(context, steps, initialSteps)\n        if time >= 0.5*benchmark.seconds:\n            break\n        if time < 0.5:\n            # Integrate enough steps to get a reasonable estimate for how many we'll need.\n            steps = int(steps*1.0/time)\n        else:\n            steps = int(steps*benchmark.seconds/time)\n\n    dt = context.getIntegrator().getStepSize()\n    return round((dt*steps*86400/time).value_in_unit(unit.nanoseconds), 2)\n",
+        "name": "heavy_hydrogen_pme.track_cpu",
+        "param_names": [],
+        "params": [],
+        "timeout": 60.0,
+        "type": "track",
+        "unit": "nanoseconds / day"
+    },
+    "heavy_hydrogen_pme.track_cuda": {
+        "code": "@wraps(func)\ndef benchmark():\n    steps = 20\n    while True:\n        time = timeIntegration(context, steps, initialSteps)\n        if time >= 0.5*benchmark.seconds:\n            break\n        if time < 0.5:\n            # Integrate enough steps to get a reasonable estimate for how many we'll need.\n            steps = int(steps*1.0/time)\n        else:\n            steps = int(steps*benchmark.seconds/time)\n\n    dt = context.getIntegrator().getStepSize()\n    return round((dt*steps*86400/time).value_in_unit(unit.nanoseconds), 2)\n",
+        "name": "heavy_hydrogen_pme.track_cuda",
+        "param_names": [],
+        "params": [],
+        "timeout": 60.0,
+        "type": "track",
+        "unit": "nanoseconds / day"
+    },
+    "heavy_hydrogen_pme.track_opencl": {
+        "code": "@wraps(func)\ndef benchmark():\n    steps = 20\n    while True:\n        time = timeIntegration(context, steps, initialSteps)\n        if time >= 0.5*benchmark.seconds:\n            break\n        if time < 0.5:\n            # Integrate enough steps to get a reasonable estimate for how many we'll need.\n            steps = int(steps*1.0/time)\n        else:\n            steps = int(steps*benchmark.seconds/time)\n\n    dt = context.getIntegrator().getStepSize()\n    return round((dt*steps*86400/time).value_in_unit(unit.nanoseconds), 2)\n",
+        "name": "heavy_hydrogen_pme.track_opencl",
+        "param_names": [],
+        "params": [],
+        "timeout": 60.0,
+        "type": "track",
+        "unit": "nanoseconds / day"
+    },
+    "pme.track_cpu": {
+        "code": "@wraps(func)\ndef benchmark():\n    steps = 20\n    while True:\n        time = timeIntegration(context, steps, initialSteps)\n        if time >= 0.5*benchmark.seconds:\n            break\n        if time < 0.5:\n            # Integrate enough steps to get a reasonable estimate for how many we'll need.\n            steps = int(steps*1.0/time)\n        else:\n            steps = int(steps*benchmark.seconds/time)\n\n    dt = context.getIntegrator().getStepSize()\n    return round((dt*steps*86400/time).value_in_unit(unit.nanoseconds), 2)\n",
+        "name": "pme.track_cpu",
+        "param_names": [],
+        "params": [],
+        "timeout": 60.0,
+        "type": "track",
+        "unit": "nanoseconds / day"
+    },
+    "pme.track_cuda": {
+        "code": "@wraps(func)\ndef benchmark():\n    steps = 20\n    while True:\n        time = timeIntegration(context, steps, initialSteps)\n        if time >= 0.5*benchmark.seconds:\n            break\n        if time < 0.5:\n            # Integrate enough steps to get a reasonable estimate for how many we'll need.\n            steps = int(steps*1.0/time)\n        else:\n            steps = int(steps*benchmark.seconds/time)\n\n    dt = context.getIntegrator().getStepSize()\n    return round((dt*steps*86400/time).value_in_unit(unit.nanoseconds), 2)\n",
+        "name": "pme.track_cuda",
+        "param_names": [],
+        "params": [],
+        "timeout": 60.0,
+        "type": "track",
+        "unit": "nanoseconds / day"
+    },
+    "pme.track_opencl": {
+        "code": "@wraps(func)\ndef benchmark():\n    steps = 20\n    while True:\n        time = timeIntegration(context, steps, initialSteps)\n        if time >= 0.5*benchmark.seconds:\n            break\n        if time < 0.5:\n            # Integrate enough steps to get a reasonable estimate for how many we'll need.\n            steps = int(steps*1.0/time)\n        else:\n            steps = int(steps*benchmark.seconds/time)\n\n    dt = context.getIntegrator().getStepSize()\n    return round((dt*steps*86400/time).value_in_unit(unit.nanoseconds), 2)\n",
+        "name": "pme.track_opencl",
+        "param_names": [],
+        "params": [],
+        "timeout": 60.0,
+        "type": "track",
+        "unit": "nanoseconds / day"
+    },
+    "version": 1
+}

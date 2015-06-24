@@ -1,0 +1,20 @@
+{
+    "commit_hash": "83d092af440c328e447accbb1c81518c11003344",
+    "date": 1434732554000,
+    "params": {
+        "arch": "x86_64",
+        "cpu": "Intel(R) Core(TM) i7-3770 CPU @ 3.40GHz",
+        "gpu": "AMD Radeon HD 7900",
+        "machine": "vspm9",
+        "os": "Linux 3.19.0-21-generic",
+        "python": "3.4",
+        "ram": "12264472"
+    },
+    "profiles": {},
+    "python": "3.4",
+    "requirements": {},
+    "results": {
+        "gbsa.track_opencl": 119.6
+    },
+    "version": 1
+}

@@ -1,0 +1,9 @@
+{
+    "arch": "x86_64",
+    "cpu": "Intel(R) Core(TM) i7-3770 CPU @ 3.40GHz",
+    "gpu": "AMD Radeon HD 7900",
+    "machine": "vspm9",
+    "os": "Linux 3.19.0-21-generic",
+    "ram": "12264472",
+    "version": 1
+}
