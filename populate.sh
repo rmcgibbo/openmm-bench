@@ -4,7 +4,7 @@ echo "For a new machine, run asv on all  the commits that have been benchmarked 
 
 git checkout master
 git pull origin master
-asv run -k EXISTING
+asv run -k EXISTING --machine vsp-fah-nvidia
 git add -u results
 git add results
 git commit -m "New results" -a || true
