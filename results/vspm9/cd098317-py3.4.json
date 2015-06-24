@@ -14,7 +14,15 @@
     "python": "3.4",
     "requirements": {},
     "results": {
-        "gbsa.track_opencl": 118.34
+        "gbsa.track_cpu": 5.79,
+        "gbsa.track_cuda": null,
+        "gbsa.track_opencl": 121.98,
+        "heavy_hydrogen_pme.track_cpu": 22.58,
+        "heavy_hydrogen_pme.track_cuda": null,
+        "heavy_hydrogen_pme.track_opencl": 71.7,
+        "pme.track_cpu": 9.71,
+        "pme.track_cuda": null,
+        "pme.track_opencl": 33.35
     },
     "version": 1
 }
