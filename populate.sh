@@ -1,4 +1,4 @@
-set -e -x
+set -e -x 
 
 echo "For a new machine, run asv on all  the commits that have been benchmarked on other machines"
 
