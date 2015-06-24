@@ -1,0 +1,28 @@
+{
+    "commit_hash": "c096fa02953d31cd924d26293f242808fd92eed3", 
+    "date": 1433972999000, 
+    "params": {
+        "arch": "x86_64", 
+        "cpu": "AMD Phenom(tm) II X6 1090T Processor", 
+        "gpu": "AMD Radeon HD 7990", 
+        "machine": "vsp-fah", 
+        "os": "Linux 3.16.0-41-generic", 
+        "python": "3.4", 
+        "ram": "8175320"
+    }, 
+    "profiles": {}, 
+    "python": "3.4", 
+    "requirements": {}, 
+    "results": {
+        "gbsa.track_cpu": null, 
+        "gbsa.track_cuda": null, 
+        "gbsa.track_opencl": 108.56, 
+        "heavy_hydrogen_pme.track_cpu": null, 
+        "heavy_hydrogen_pme.track_cuda": null, 
+        "heavy_hydrogen_pme.track_opencl": 75.72, 
+        "pme.track_cpu": null, 
+        "pme.track_cuda": null, 
+        "pme.track_opencl": 36.5
+    }, 
+    "version": 1
+}
