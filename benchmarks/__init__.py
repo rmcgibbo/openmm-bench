@@ -2,7 +2,6 @@ from __future__ import print_function
 import sys
 import os
 import timeit
-from datetime import datetime
 from functools import wraps
 
 import simtk.openmm.app as app
@@ -11,15 +10,38 @@ import simtk.unit as unit
 from .setup import createContext
 
 
+def timeIntegration(context, steps, initialSteps):
+    """Integrate a Context for a specified number of steps, then return how many seconds it took."""
+    context.getIntegrator().step(initialSteps) # Make sure everything is fully initialized
+    context.getState(getEnergy=True)
+    start = timeit.default_timer()
+    context.getIntegrator().step(steps)
+    context.getState(getEnergy=True)
+    end = timeit.default_timer()
+    return (end - start)
+    
+
 def create_benchmark(**params):
     def decorator(func):
         def setup():
-            global context
-            context = createContext(params)
+            global context, initialSteps
+            context, initialSteps = createContext(params)            
 
         @wraps(func)
         def benchmark():
-            context.getIntegrator().step(params['steps'])
+            steps = 20
+            while True:
+                time = timeIntegration(context, steps, initialSteps)
+                if time >= 0.5*benchmark.seconds:
+                    break
+                if time < 0.5:
+                    # Integrate enough steps to get a reasonable estimate for how many we'll need.
+                    steps = int(steps*1.0/time)
+                else:
+                    steps = int(steps*benchmark.seconds/time)
+
+            dt = context.getIntegrator().getStepSize()
+            return round((dt*steps*86400/time).value_in_unit(unit.nanoseconds), 2)
 
         def teardown():
             global context
@@ -27,10 +49,8 @@ def create_benchmark(**params):
 
         benchmark.setup = setup
         benchmark.teardown = teardown
-        benchmark.timeout = 120.0
-        benchmark.goal_time = 30.0
-        benchmark.repeat = 1
-        benchmark.timer = timeit.default_timer
+        benchmark.unit = 'nanoseconds / day'
+        benchmark.seconds = 30.0
 
         return benchmark
 
@@ -123,6 +143,4 @@ def createContext(options):
     context.setPositions(pdb.positions)
     context.setVelocitiesToTemperature(300*unit.kelvin)
 
-    context.getIntegrator().step(initialSteps) # Make sure everything is fully initialized
-    context.getState(getEnergy=True)
-    return context
+    return context, initialSteps
