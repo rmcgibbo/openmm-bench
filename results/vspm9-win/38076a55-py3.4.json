@@ -1,0 +1,28 @@
+{
+    "commit_hash": "38076a55aeba2a51b0603ee96fbe7f30ab8344b7",
+    "date": 1435099391000,
+    "params": {
+        "arch": "x86_64",
+        "cpu": "Intel(R) Core(TM) i7-3770 CPU @ 3.40GHz",
+        "gpu": "AMD Radeon R9 200",
+        "machine": "vspm9-win",
+        "os": "Windows 8",
+        "python": "3.4",
+        "ram": "16381544"
+    },
+    "profiles": {},
+    "python": "3.4",
+    "requirements": {},
+    "results": {
+        "gbsa.track_cpu": 4.75,
+        "gbsa.track_cuda": null,
+        "gbsa.track_opencl": 130.84,
+        "heavy_hydrogen_pme.track_cpu": 4.81,
+        "heavy_hydrogen_pme.track_cuda": null,
+        "heavy_hydrogen_pme.track_opencl": 70.75,
+        "pme.track_cpu": 2.03,
+        "pme.track_cuda": null,
+        "pme.track_opencl": 35.29
+    },
+    "version": 1
+}

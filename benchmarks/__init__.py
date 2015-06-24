@@ -4,10 +4,28 @@ import os
 import timeit
 from functools import wraps
 
-import simtk.openmm.app as app
-import simtk.openmm as mm
-import simtk.unit as unit
+try:
+    import simtk.openmm.app as app
+    import simtk.openmm as mm
+    import simtk.unit as unit
+except ImportError:
+    # Workaround for old versions of OpenMM (before ~ e16acd1bd, January 15, 2015)
+    if sys.platform == 'win32':
+        lib = os.path.join(sys.prefix, 'Lib')
+        _path = os.environ['PATH']
+        os.environ['PATH'] = '%(lib)s;%(lib)s\plugins;%(path)s' % {
+            'lib': lib, 'path': _path}
+
+        import simtk.openmm.app as app
+        import simtk.openmm as mm
+        import simtk.unit as unit
+
+        mm.Platform.loadPluginsFromDirectory(os.path.join(lib, 'plugins'))
+    else:
+        raise
+
 from .setup import createContext
+
 
 
 def timeIntegration(context, steps, initialSteps):
