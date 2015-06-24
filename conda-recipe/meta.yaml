@@ -7,8 +7,7 @@ source:
   # asv, but if you want to build this recipe manually to debug it using `conda build`
   # you need to set the SOURCE_PATH environment variable to point at the source code
   # e.g. in env/<LONG_HASH>/project
-  # git_url:  {{environ.get('SOURCE_PATH', 'YOU NEED TO SET THIS ENV VARIABLE')}}
-  git_url: "C:\\Users\\rmcgibbo\\projects\\openmm-bench\\env\\77f2c104c7e2c3fba9eaad6360cdf4e8\\project"
+  git_url:  {{environ.get('SOURCE_PATH', 'YOU NEED TO SET THIS ENV VARIABLE')}}
 
 requirements:
   build:
