@@ -1,0 +1,28 @@
+{
+    "commit_hash": "96f0c0f2df52dcd80561219a6faaddab4747a170",
+    "date": 1435002818000,
+    "params": {
+        "arch": "x86_64",
+        "cpu": "Intel(R) Core(TM) i5-4670K CPU @ 3.40GHz",
+        "gpu": "NVIDIA GTX 680",
+        "machine": "vspm58",
+        "os": "Linux 3.13.0-54-generic",
+        "python": "3.4",
+        "ram": "16381544"
+    },
+    "profiles": {},
+    "python": "3.4",
+    "requirements": {},
+    "results": {
+        "gbsa.track_cpu": 3.24,
+        "gbsa.track_cuda": 192.04,
+        "gbsa.track_opencl": 140.45,
+        "heavy_hydrogen_pme.track_cpu": 13.55,
+        "heavy_hydrogen_pme.track_cuda": 138.6,
+        "heavy_hydrogen_pme.track_opencl": 109.62,
+        "pme.track_cpu": 5.49,
+        "pme.track_cuda": 65.61,
+        "pme.track_opencl": 49.71
+    },
+    "version": 1
+}
