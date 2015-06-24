@@ -1,10 +1,10 @@
 set -e -x
 
-echo "Run asv on all new commits, and update the site"
+echo "For a new machine, run asv on all  the commits that have been benchmarked on other machines"
 
 git checkout master
 git pull origin master
-asv run -k NEW
+asv run -k EXISTING
 git add -u results
 git add results
 git commit -m "New results" -a || true
