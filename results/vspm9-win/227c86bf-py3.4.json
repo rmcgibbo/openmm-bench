@@ -1,6 +1,6 @@
 {
-    "commit_hash": "38076a55aeba2a51b0603ee96fbe7f30ab8344b7",
-    "date": 1435099391000,
+    "commit_hash": "227c86bf488e68d663a81776848203bfe27c4cc0",
+    "date": 1433440800000,
     "params": {
         "arch": "x86_64",
         "cpu": "Intel(R) Core(TM) i7-3770 CPU @ 3.40GHz",
@@ -14,15 +14,15 @@
     "python": "3.4",
     "requirements": {},
     "results": {
-        "gbsa.track_cpu": 4.71,
+        "gbsa.track_cpu": 4.75,
         "gbsa.track_cuda": null,
-        "gbsa.track_opencl": 133.44,
-        "heavy_hydrogen_pme.track_cpu": 5.09,
+        "gbsa.track_opencl": 131.67,
+        "heavy_hydrogen_pme.track_cpu": 5.14,
         "heavy_hydrogen_pme.track_cuda": null,
-        "heavy_hydrogen_pme.track_opencl": 68.97,
-        "pme.track_cpu": 2.01,
+        "heavy_hydrogen_pme.track_opencl": 64.74,
+        "pme.track_cpu": 2.08,
         "pme.track_cuda": null,
-        "pme.track_opencl": 34.67
+        "pme.track_opencl": 35.15
     },
     "version": 1
 }

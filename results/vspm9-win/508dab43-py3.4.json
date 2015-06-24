@@ -14,15 +14,15 @@
     "python": "3.4",
     "requirements": {},
     "results": {
-        "gbsa.track_cpu": 4.76,
+        "gbsa.track_cpu": 4.73,
         "gbsa.track_cuda": null,
-        "gbsa.track_opencl": 133.14,
-        "heavy_hydrogen_pme.track_cpu": 5.09,
+        "gbsa.track_opencl": 132.65,
+        "heavy_hydrogen_pme.track_cpu": 5.12,
         "heavy_hydrogen_pme.track_cuda": null,
-        "heavy_hydrogen_pme.track_opencl": 69.89,
-        "pme.track_cpu": 2.09,
+        "heavy_hydrogen_pme.track_opencl": 65.3,
+        "pme.track_cpu": 2.07,
         "pme.track_cuda": null,
-        "pme.track_opencl": 35.37
+        "pme.track_opencl": 34.57
     },
     "version": 1
 }

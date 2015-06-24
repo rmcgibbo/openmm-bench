@@ -14,13 +14,13 @@
     "python": "3.4",
     "requirements": {},
     "results": {
-        "gbsa.track_cpu": 4.76,
+        "gbsa.track_cpu": 4.71,
         "gbsa.track_cuda": null,
-        "gbsa.track_opencl": 133.55,
-        "heavy_hydrogen_pme.track_cpu": 5.14,
+        "gbsa.track_opencl": 128.77,
+        "heavy_hydrogen_pme.track_cpu": 5.08,
         "heavy_hydrogen_pme.track_cuda": null,
-        "heavy_hydrogen_pme.track_opencl": 63.4,
-        "pme.track_cpu": 2.07,
+        "heavy_hydrogen_pme.track_opencl": 69.42,
+        "pme.track_cpu": 2.05,
         "pme.track_cuda": null,
         "pme.track_opencl": 34.68
     },

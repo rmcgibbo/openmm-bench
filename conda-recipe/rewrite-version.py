@@ -12,7 +12,7 @@ import sys
 import os
 
 with open(os.path.join(os.environ['SP_DIR'], 'simtk', 'openmm', 'version.py'), 'w') as f:
-    f.write("\nopenmm_library_path = '%s'\n" % os.path.join(os.environ['PREFIX'], 'lib').replace('\\', '\\\\'))
+    f.write("\nopenmm_library_path = '%s'\n" % os.path.join(os.environ['PREFIX'], 'lib').replace('\\', '/'))
 
 with open(os.path.join(os.environ['SP_DIR'], 'simtk', 'openmm', '__init__.py'), 'w') as f:
     f.write("""
