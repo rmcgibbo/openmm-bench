@@ -1,0 +1,28 @@
+{
+    "commit_hash": "13d366a9bc89ece54ab1ee054464c33bd3ae16be", 
+    "date": 1433376430000, 
+    "params": {
+        "arch": "x86_64", 
+        "cpu": "AMD Phenom(tm) II X6 1090T Processor", 
+        "gpu": "NVIDIA GTX 780", 
+        "machine": "vsp-fah-nvidia", 
+        "os": "Linux 3.16.0-41-generic", 
+        "python": "3.4", 
+        "ram": "8175320"
+    }, 
+    "profiles": {}, 
+    "python": "3.4", 
+    "requirements": {}, 
+    "results": {
+        "gbsa.track_cpu": null, 
+        "gbsa.track_cuda": null, 
+        "gbsa.track_opencl": 199.22, 
+        "heavy_hydrogen_pme.track_cpu": null, 
+        "heavy_hydrogen_pme.track_cuda": null, 
+        "heavy_hydrogen_pme.track_opencl": 184.66, 
+        "pme.track_cpu": null, 
+        "pme.track_cuda": null, 
+        "pme.track_opencl": 77.97
+    }, 
+    "version": 1
+}
