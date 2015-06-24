@@ -8,6 +8,9 @@ asv run -k EXISTING
 git add -u results
 git add results
 git commit -m "New results" -a || true
+git pull origin master
+git merge origin master --no-edit
+git commit -m "New results" -a || true
 git push origin master
 asv publish
 asv gh-pages
