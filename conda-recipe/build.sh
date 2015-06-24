@@ -2,15 +2,18 @@
 
 CMAKE_FLAGS="-DCMAKE_INSTALL_PREFIX=$PREFIX -DBUILD_TESTING=OFF"
 CMAKE_FLAGS+=" -DOPENMM_BUILD_OPENCL_TESTS=OFF"
+CMAKE_FLAGS+=" -DOPENMM_BUILD_CUDA_TESTS=OFF"
 CMAKE_FLAGS+=" -DOPENMM_BUILD_C_AND_FORTRAN_WRAPPERS=OFF"
 CMAKE_FLAGS+=" -DOPENMM_BUILD_DRUDE_OPENCL_LIB=OFF"
 CMAKE_FLAGS+=" -DOPENMM_BUILD_RPMD_OPENCL_LIB=OFF"
 
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+source ${DIR}/build_`hostname`.sh
+
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     # setting the rpath so that libOpenMMPME.so finds the right libfftw3
     CMAKE_FLAGS+=" -DCMAKE_INSTALL_RPATH=.."
-    CMAKE_FLAGS+=" -DOPENCL_INCLUDE_DIR=/opt/AMDAPPSDK-3.0-0-Beta/include"
-    CMAKE_FLAGS+=" -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=/usr/lib/ccache/g++"
+    CMAKE_FLAGS+=" -DCMAKE_CXX_COMPILER=/usr/lib/ccache/g++"
 
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     export MACOSX_DEPLOYMENT_TARGET="10.7"
