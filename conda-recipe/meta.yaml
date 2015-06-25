@@ -1,0 +1,26 @@
+package:
+  name: openmm
+  version: !!str dev
+
+source:
+  # this environment variable is set automatically when this recipe is invoked by
+  # asv, but if you want to build this recipe manually to debug it using `conda build`
+  # you need to set the SOURCE_PATH environment variable to point at the source code
+  # e.g. in env/<LONG_HASH>/project
+  git_url:  {{environ.get('SOURCE_PATH', 'YOU NEED TO SET THIS ENV VARIABLE')}}
+
+requirements:
+  build:
+    - cmake  # [not win]
+    - python
+    - fftw3f
+    - swig   # [not win]
+
+  run:
+    - python
+    - fftw3f
+    - numpy
+
+about:
+  home: https://simtk.org/home/openmm
+  license: GPL

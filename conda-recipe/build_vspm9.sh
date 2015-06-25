@@ -1,0 +1,1 @@
+CMAKE_FLAGS+=" -DOPENCL_INCLUDE_DIR=/opt/AMDAPPSDK-3.0-0-Beta/include"

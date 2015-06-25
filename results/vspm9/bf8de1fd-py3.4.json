@@ -1,0 +1,28 @@
+{
+    "commit_hash": "bf8de1fd5a90c95d1a69b4e56b376d170f6b30a6",
+    "date": 1417727316000,
+    "params": {
+        "arch": "x86_64",
+        "cpu": "Intel(R) Core(TM) i7-3770 CPU @ 3.40GHz",
+        "gpu": "AMD Radeon HD 7900",
+        "machine": "vspm9",
+        "os": "Linux 3.19.0-21-generic",
+        "python": "3.4",
+        "ram": "12264472"
+    },
+    "profiles": {},
+    "python": "3.4",
+    "requirements": {},
+    "results": {
+        "gbsa.track_cpu": 5.71,
+        "gbsa.track_cuda": null,
+        "gbsa.track_opencl": 124.4,
+        "heavy_hydrogen_pme.track_cpu": 22.76,
+        "heavy_hydrogen_pme.track_cuda": null,
+        "heavy_hydrogen_pme.track_opencl": 71.53,
+        "pme.track_cpu": 9.54,
+        "pme.track_cuda": null,
+        "pme.track_opencl": 33.8
+    },
+    "version": 1
+}

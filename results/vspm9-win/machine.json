@@ -1,0 +1,9 @@
+{
+    "arch": "x86_64",
+    "cpu": "Intel(R) Core(TM) i7-3770 CPU @ 3.40GHz",
+    "gpu": "AMD Radeon R9 200",
+    "machine": "vspm9-win",
+    "os": "Windows 8",
+    "ram": "16381544",
+    "version": 1
+}

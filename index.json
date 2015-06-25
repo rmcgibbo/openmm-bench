@@ -1,0 +1,685 @@
+{
+    "benchmarks": {
+        "gbsa.track_cpu": {
+            "code": "@wraps(func)\ndef benchmark():\n    steps = 20\n    while True:\n        time = timeIntegration(context, steps, initialSteps)\n        if time >= 0.5*benchmark.seconds:\n            break\n        if time < 0.5:\n            # Integrate enough steps to get a reasonable estimate for how many we'll need.\n            steps = int(steps*1.0/time)\n        else:\n            steps = int(steps*benchmark.seconds/time)\n\n    dt = context.getIntegrator().getStepSize()\n    return round((dt*steps*86400/time).value_in_unit(unit.nanoseconds), 2)\n",
+            "name": "gbsa.track_cpu",
+            "param_names": [],
+            "params": [],
+            "timeout": 60.0,
+            "type": "track",
+            "unit": "nanoseconds / day"
+        },
+        "gbsa.track_cuda": {
+            "code": "@wraps(func)\ndef benchmark():\n    steps = 20\n    while True:\n        time = timeIntegration(context, steps, initialSteps)\n        if time >= 0.5*benchmark.seconds:\n            break\n        if time < 0.5:\n            # Integrate enough steps to get a reasonable estimate for how many we'll need.\n            steps = int(steps*1.0/time)\n        else:\n            steps = int(steps*benchmark.seconds/time)\n\n    dt = context.getIntegrator().getStepSize()\n    return round((dt*steps*86400/time).value_in_unit(unit.nanoseconds), 2)\n",
+            "name": "gbsa.track_cuda",
+            "param_names": [],
+            "params": [],
+            "timeout": 60.0,
+            "type": "track",
+            "unit": "nanoseconds / day"
+        },
+        "gbsa.track_opencl": {
+            "code": "@wraps(func)\ndef benchmark():\n    steps = 20\n    while True:\n        time = timeIntegration(context, steps, initialSteps)\n        if time >= 0.5*benchmark.seconds:\n            break\n        if time < 0.5:\n            # Integrate enough steps to get a reasonable estimate for how many we'll need.\n            steps = int(steps*1.0/time)\n        else:\n            steps = int(steps*benchmark.seconds/time)\n\n    dt = context.getIntegrator().getStepSize()\n    return round((dt*steps*86400/time).value_in_unit(unit.nanoseconds), 2)\n",
+            "name": "gbsa.track_opencl",
+            "param_names": [],
+            "params": [],
+            "timeout": 60.0,
+            "type": "track",
+            "unit": "nanoseconds / day"
+        },
+        "heavy_hydrogen_pme.track_cpu": {
+            "code": "@wraps(func)\ndef benchmark():\n    steps = 20\n    while True:\n        time = timeIntegration(context, steps, initialSteps)\n        if time >= 0.5*benchmark.seconds:\n            break\n        if time < 0.5:\n            # Integrate enough steps to get a reasonable estimate for how many we'll need.\n            steps = int(steps*1.0/time)\n        else:\n            steps = int(steps*benchmark.seconds/time)\n\n    dt = context.getIntegrator().getStepSize()\n    return round((dt*steps*86400/time).value_in_unit(unit.nanoseconds), 2)\n",
+            "name": "heavy_hydrogen_pme.track_cpu",
+            "param_names": [],
+            "params": [],
+            "timeout": 60.0,
+            "type": "track",
+            "unit": "nanoseconds / day"
+        },
+        "heavy_hydrogen_pme.track_cuda": {
+            "code": "@wraps(func)\ndef benchmark():\n    steps = 20\n    while True:\n        time = timeIntegration(context, steps, initialSteps)\n        if time >= 0.5*benchmark.seconds:\n            break\n        if time < 0.5:\n            # Integrate enough steps to get a reasonable estimate for how many we'll need.\n            steps = int(steps*1.0/time)\n        else:\n            steps = int(steps*benchmark.seconds/time)\n\n    dt = context.getIntegrator().getStepSize()\n    return round((dt*steps*86400/time).value_in_unit(unit.nanoseconds), 2)\n",
+            "name": "heavy_hydrogen_pme.track_cuda",
+            "param_names": [],
+            "params": [],
+            "timeout": 60.0,
+            "type": "track",
+            "unit": "nanoseconds / day"
+        },
+        "heavy_hydrogen_pme.track_opencl": {
+            "code": "@wraps(func)\ndef benchmark():\n    steps = 20\n    while True:\n        time = timeIntegration(context, steps, initialSteps)\n        if time >= 0.5*benchmark.seconds:\n            break\n        if time < 0.5:\n            # Integrate enough steps to get a reasonable estimate for how many we'll need.\n            steps = int(steps*1.0/time)\n        else:\n            steps = int(steps*benchmark.seconds/time)\n\n    dt = context.getIntegrator().getStepSize()\n    return round((dt*steps*86400/time).value_in_unit(unit.nanoseconds), 2)\n",
+            "name": "heavy_hydrogen_pme.track_opencl",
+            "param_names": [],
+            "params": [],
+            "timeout": 60.0,
+            "type": "track",
+            "unit": "nanoseconds / day"
+        },
+        "pme.track_cpu": {
+            "code": "@wraps(func)\ndef benchmark():\n    steps = 20\n    while True:\n        time = timeIntegration(context, steps, initialSteps)\n        if time >= 0.5*benchmark.seconds:\n            break\n        if time < 0.5:\n            # Integrate enough steps to get a reasonable estimate for how many we'll need.\n            steps = int(steps*1.0/time)\n        else:\n            steps = int(steps*benchmark.seconds/time)\n\n    dt = context.getIntegrator().getStepSize()\n    return round((dt*steps*86400/time).value_in_unit(unit.nanoseconds), 2)\n",
+            "name": "pme.track_cpu",
+            "param_names": [],
+            "params": [],
+            "timeout": 60.0,
+            "type": "track",
+            "unit": "nanoseconds / day"
+        },
+        "pme.track_cuda": {
+            "code": "@wraps(func)\ndef benchmark():\n    steps = 20\n    while True:\n        time = timeIntegration(context, steps, initialSteps)\n        if time >= 0.5*benchmark.seconds:\n            break\n        if time < 0.5:\n            # Integrate enough steps to get a reasonable estimate for how many we'll need.\n            steps = int(steps*1.0/time)\n        else:\n            steps = int(steps*benchmark.seconds/time)\n\n    dt = context.getIntegrator().getStepSize()\n    return round((dt*steps*86400/time).value_in_unit(unit.nanoseconds), 2)\n",
+            "name": "pme.track_cuda",
+            "param_names": [],
+            "params": [],
+            "timeout": 60.0,
+            "type": "track",
+            "unit": "nanoseconds / day"
+        },
+        "pme.track_opencl": {
+            "code": "@wraps(func)\ndef benchmark():\n    steps = 20\n    while True:\n        time = timeIntegration(context, steps, initialSteps)\n        if time >= 0.5*benchmark.seconds:\n            break\n        if time < 0.5:\n            # Integrate enough steps to get a reasonable estimate for how many we'll need.\n            steps = int(steps*1.0/time)\n        else:\n            steps = int(steps*benchmark.seconds/time)\n\n    dt = context.getIntegrator().getStepSize()\n    return round((dt*steps*86400/time).value_in_unit(unit.nanoseconds), 2)\n",
+            "name": "pme.track_opencl",
+            "param_names": [],
+            "params": [],
+            "timeout": 60.0,
+            "type": "track",
+            "unit": "nanoseconds / day"
+        }
+    },
+    "date_to_hash": {
+        "1417727316000": "bf8de1fd",
+        "1421269866000": "7bdd4a67",
+        "1423507042000": "abadfd9d",
+        "1424390705000": "bf03b073",
+        "1425068809000": "decb586c",
+        "1426792591000": "e25f5acf",
+        "1429135401000": "861a6150",
+        "1430942340000": "503fbee7",
+        "1432667956000": "3d863037",
+        "1432837134000": "50442b0a",
+        "1433376430000": "13d366a9",
+        "1433440800000": "227c86bf",
+        "1433549583000": "cd098317",
+        "1433785435000": "ec19df0e",
+        "1433794531000": "508dab43",
+        "1433890772000": "d557fa41",
+        "1433972999000": "c096fa02",
+        "1433980466000": "1d6f8b1e",
+        "1434126536000": "f9148a09",
+        "1434570603000": "71b56ad5",
+        "1434732554000": "83d092af",
+        "1434752562000": "0b4a1077",
+        "1435000427000": "0fba96e7",
+        "1435002818000": "96f0c0f2",
+        "1435079691000": "1f0e141b",
+        "1435099391000": "38076a55"
+    },
+    "graphs": {
+        "gbsa.track_cpu": [
+            {
+                "arch": "x86_64",
+                "branch": "master",
+                "cpu": "Intel(R) Core(TM) i7-3770 CPU @ 3.40GHz",
+                "gpu": "AMD Radeon R9 200",
+                "machine": "vspm9-win",
+                "os": "Windows 8",
+                "python": "3.4",
+                "ram": "16381544"
+            },
+            {
+                "arch": "x86_64",
+                "branch": "master",
+                "cpu": "AMD Phenom(tm) II X6 1090T Processor",
+                "gpu": "NVIDIA GTX 780",
+                "machine": "vsp-fah-nvidia",
+                "os": "Linux 3.16.0-41-generic",
+                "python": "3.4",
+                "ram": "8175320"
+            },
+            {
+                "arch": "x86_64",
+                "branch": "master",
+                "cpu": "Intel(R) Core(TM) i5-4670K CPU @ 3.40GHz",
+                "gpu": "NVIDIA GTX 680",
+                "machine": "vspm58",
+                "os": "Linux 3.13.0-54-generic",
+                "python": "3.4",
+                "ram": "16381544"
+            },
+            {
+                "arch": "x86_64",
+                "branch": "master",
+                "cpu": "AMD Phenom(tm) II X6 1090T Processor",
+                "gpu": "AMD Radeon HD 7990",
+                "machine": "vsp-fah",
+                "os": "Linux 3.16.0-41-generic",
+                "python": "3.4",
+                "ram": "8175320"
+            },
+            {
+                "arch": "x86_64",
+                "branch": "master",
+                "cpu": "Intel(R) Core(TM) i7-3770 CPU @ 3.40GHz",
+                "gpu": "AMD Radeon HD 7900",
+                "machine": "vspm9",
+                "os": "Linux 3.19.0-21-generic",
+                "python": "3.4",
+                "ram": "12264472"
+            }
+        ],
+        "gbsa.track_cuda": [
+            {
+                "arch": "x86_64",
+                "branch": "master",
+                "cpu": "Intel(R) Core(TM) i7-3770 CPU @ 3.40GHz",
+                "gpu": "AMD Radeon R9 200",
+                "machine": "vspm9-win",
+                "os": "Windows 8",
+                "python": "3.4",
+                "ram": "16381544"
+            },
+            {
+                "arch": "x86_64",
+                "branch": "master",
+                "cpu": "Intel(R) Core(TM) i5-4670K CPU @ 3.40GHz",
+                "gpu": "NVIDIA GTX 680",
+                "machine": "vspm58",
+                "os": "Linux 3.13.0-54-generic",
+                "python": "3.4",
+                "ram": "16381544"
+            },
+            {
+                "arch": "x86_64",
+                "branch": "master",
+                "cpu": "AMD Phenom(tm) II X6 1090T Processor",
+                "gpu": "NVIDIA GTX 780",
+                "machine": "vsp-fah-nvidia",
+                "os": "Linux 3.16.0-41-generic",
+                "python": "3.4",
+                "ram": "8175320"
+            },
+            {
+                "arch": "x86_64",
+                "branch": "master",
+                "cpu": "Intel(R) Core(TM) i7-3770 CPU @ 3.40GHz",
+                "gpu": "AMD Radeon HD 7900",
+                "machine": "vspm9",
+                "os": "Linux 3.19.0-21-generic",
+                "python": "3.4",
+                "ram": "12264472"
+            },
+            {
+                "arch": "x86_64",
+                "branch": "master",
+                "cpu": "AMD Phenom(tm) II X6 1090T Processor",
+                "gpu": "AMD Radeon HD 7990",
+                "machine": "vsp-fah",
+                "os": "Linux 3.16.0-41-generic",
+                "python": "3.4",
+                "ram": "8175320"
+            }
+        ],
+        "gbsa.track_opencl": [
+            {
+                "arch": "x86_64",
+                "branch": "master",
+                "cpu": "Intel(R) Core(TM) i7-3770 CPU @ 3.40GHz",
+                "gpu": "AMD Radeon R9 200",
+                "machine": "vspm9-win",
+                "os": "Windows 8",
+                "python": "3.4",
+                "ram": "16381544"
+            },
+            {
+                "arch": "x86_64",
+                "branch": "master",
+                "cpu": "Intel(R) Core(TM) i7-3770 CPU @ 3.40GHz",
+                "gpu": "AMD Radeon HD 7900",
+                "machine": "vspm9",
+                "os": "Linux 3.19.0-21-generic",
+                "python": "3.4",
+                "ram": "12264472"
+            },
+            {
+                "arch": "x86_64",
+                "branch": "master",
+                "cpu": "AMD Phenom(tm) II X6 1090T Processor",
+                "gpu": "AMD Radeon HD 7990",
+                "machine": "vsp-fah",
+                "os": "Linux 3.16.0-41-generic",
+                "python": "3.4",
+                "ram": "8175320"
+            },
+            {
+                "arch": "x86_64",
+                "branch": "master",
+                "cpu": "AMD Phenom(tm) II X6 1090T Processor",
+                "gpu": "NVIDIA GTX 780",
+                "machine": "vsp-fah-nvidia",
+                "os": "Linux 3.16.0-41-generic",
+                "python": "3.4",
+                "ram": "8175320"
+            },
+            {
+                "arch": "x86_64",
+                "branch": "master",
+                "cpu": "Intel(R) Core(TM) i5-4670K CPU @ 3.40GHz",
+                "gpu": "NVIDIA GTX 680",
+                "machine": "vspm58",
+                "os": "Linux 3.13.0-54-generic",
+                "python": "3.4",
+                "ram": "16381544"
+            }
+        ],
+        "heavy_hydrogen_pme.track_cpu": [
+            {
+                "arch": "x86_64",
+                "branch": "master",
+                "cpu": "Intel(R) Core(TM) i5-4670K CPU @ 3.40GHz",
+                "gpu": "NVIDIA GTX 680",
+                "machine": "vspm58",
+                "os": "Linux 3.13.0-54-generic",
+                "python": "3.4",
+                "ram": "16381544"
+            },
+            {
+                "arch": "x86_64",
+                "branch": "master",
+                "cpu": "Intel(R) Core(TM) i7-3770 CPU @ 3.40GHz",
+                "gpu": "AMD Radeon HD 7900",
+                "machine": "vspm9",
+                "os": "Linux 3.19.0-21-generic",
+                "python": "3.4",
+                "ram": "12264472"
+            },
+            {
+                "arch": "x86_64",
+                "branch": "master",
+                "cpu": "AMD Phenom(tm) II X6 1090T Processor",
+                "gpu": "AMD Radeon HD 7990",
+                "machine": "vsp-fah",
+                "os": "Linux 3.16.0-41-generic",
+                "python": "3.4",
+                "ram": "8175320"
+            },
+            {
+                "arch": "x86_64",
+                "branch": "master",
+                "cpu": "Intel(R) Core(TM) i7-3770 CPU @ 3.40GHz",
+                "gpu": "AMD Radeon R9 200",
+                "machine": "vspm9-win",
+                "os": "Windows 8",
+                "python": "3.4",
+                "ram": "16381544"
+            },
+            {
+                "arch": "x86_64",
+                "branch": "master",
+                "cpu": "AMD Phenom(tm) II X6 1090T Processor",
+                "gpu": "NVIDIA GTX 780",
+                "machine": "vsp-fah-nvidia",
+                "os": "Linux 3.16.0-41-generic",
+                "python": "3.4",
+                "ram": "8175320"
+            }
+        ],
+        "heavy_hydrogen_pme.track_cuda": [
+            {
+                "arch": "x86_64",
+                "branch": "master",
+                "cpu": "Intel(R) Core(TM) i7-3770 CPU @ 3.40GHz",
+                "gpu": "AMD Radeon R9 200",
+                "machine": "vspm9-win",
+                "os": "Windows 8",
+                "python": "3.4",
+                "ram": "16381544"
+            },
+            {
+                "arch": "x86_64",
+                "branch": "master",
+                "cpu": "AMD Phenom(tm) II X6 1090T Processor",
+                "gpu": "NVIDIA GTX 780",
+                "machine": "vsp-fah-nvidia",
+                "os": "Linux 3.16.0-41-generic",
+                "python": "3.4",
+                "ram": "8175320"
+            },
+            {
+                "arch": "x86_64",
+                "branch": "master",
+                "cpu": "Intel(R) Core(TM) i5-4670K CPU @ 3.40GHz",
+                "gpu": "NVIDIA GTX 680",
+                "machine": "vspm58",
+                "os": "Linux 3.13.0-54-generic",
+                "python": "3.4",
+                "ram": "16381544"
+            },
+            {
+                "arch": "x86_64",
+                "branch": "master",
+                "cpu": "AMD Phenom(tm) II X6 1090T Processor",
+                "gpu": "AMD Radeon HD 7990",
+                "machine": "vsp-fah",
+                "os": "Linux 3.16.0-41-generic",
+                "python": "3.4",
+                "ram": "8175320"
+            },
+            {
+                "arch": "x86_64",
+                "branch": "master",
+                "cpu": "Intel(R) Core(TM) i7-3770 CPU @ 3.40GHz",
+                "gpu": "AMD Radeon HD 7900",
+                "machine": "vspm9",
+                "os": "Linux 3.19.0-21-generic",
+                "python": "3.4",
+                "ram": "12264472"
+            }
+        ],
+        "heavy_hydrogen_pme.track_opencl": [
+            {
+                "arch": "x86_64",
+                "branch": "master",
+                "cpu": "Intel(R) Core(TM) i7-3770 CPU @ 3.40GHz",
+                "gpu": "AMD Radeon R9 200",
+                "machine": "vspm9-win",
+                "os": "Windows 8",
+                "python": "3.4",
+                "ram": "16381544"
+            },
+            {
+                "arch": "x86_64",
+                "branch": "master",
+                "cpu": "Intel(R) Core(TM) i5-4670K CPU @ 3.40GHz",
+                "gpu": "NVIDIA GTX 680",
+                "machine": "vspm58",
+                "os": "Linux 3.13.0-54-generic",
+                "python": "3.4",
+                "ram": "16381544"
+            },
+            {
+                "arch": "x86_64",
+                "branch": "master",
+                "cpu": "AMD Phenom(tm) II X6 1090T Processor",
+                "gpu": "AMD Radeon HD 7990",
+                "machine": "vsp-fah",
+                "os": "Linux 3.16.0-41-generic",
+                "python": "3.4",
+                "ram": "8175320"
+            },
+            {
+                "arch": "x86_64",
+                "branch": "master",
+                "cpu": "AMD Phenom(tm) II X6 1090T Processor",
+                "gpu": "NVIDIA GTX 780",
+                "machine": "vsp-fah-nvidia",
+                "os": "Linux 3.16.0-41-generic",
+                "python": "3.4",
+                "ram": "8175320"
+            },
+            {
+                "arch": "x86_64",
+                "branch": "master",
+                "cpu": "Intel(R) Core(TM) i7-3770 CPU @ 3.40GHz",
+                "gpu": "AMD Radeon HD 7900",
+                "machine": "vspm9",
+                "os": "Linux 3.19.0-21-generic",
+                "python": "3.4",
+                "ram": "12264472"
+            }
+        ],
+        "pme.track_cpu": [
+            {
+                "arch": "x86_64",
+                "branch": "master",
+                "cpu": "Intel(R) Core(TM) i7-3770 CPU @ 3.40GHz",
+                "gpu": "AMD Radeon HD 7900",
+                "machine": "vspm9",
+                "os": "Linux 3.19.0-21-generic",
+                "python": "3.4",
+                "ram": "12264472"
+            },
+            {
+                "arch": "x86_64",
+                "branch": "master",
+                "cpu": "AMD Phenom(tm) II X6 1090T Processor",
+                "gpu": "NVIDIA GTX 780",
+                "machine": "vsp-fah-nvidia",
+                "os": "Linux 3.16.0-41-generic",
+                "python": "3.4",
+                "ram": "8175320"
+            },
+            {
+                "arch": "x86_64",
+                "branch": "master",
+                "cpu": "Intel(R) Core(TM) i7-3770 CPU @ 3.40GHz",
+                "gpu": "AMD Radeon R9 200",
+                "machine": "vspm9-win",
+                "os": "Windows 8",
+                "python": "3.4",
+                "ram": "16381544"
+            },
+            {
+                "arch": "x86_64",
+                "branch": "master",
+                "cpu": "AMD Phenom(tm) II X6 1090T Processor",
+                "gpu": "AMD Radeon HD 7990",
+                "machine": "vsp-fah",
+                "os": "Linux 3.16.0-41-generic",
+                "python": "3.4",
+                "ram": "8175320"
+            },
+            {
+                "arch": "x86_64",
+                "branch": "master",
+                "cpu": "Intel(R) Core(TM) i5-4670K CPU @ 3.40GHz",
+                "gpu": "NVIDIA GTX 680",
+                "machine": "vspm58",
+                "os": "Linux 3.13.0-54-generic",
+                "python": "3.4",
+                "ram": "16381544"
+            }
+        ],
+        "pme.track_cuda": [
+            {
+                "arch": "x86_64",
+                "branch": "master",
+                "cpu": "AMD Phenom(tm) II X6 1090T Processor",
+                "gpu": "NVIDIA GTX 780",
+                "machine": "vsp-fah-nvidia",
+                "os": "Linux 3.16.0-41-generic",
+                "python": "3.4",
+                "ram": "8175320"
+            },
+            {
+                "arch": "x86_64",
+                "branch": "master",
+                "cpu": "Intel(R) Core(TM) i7-3770 CPU @ 3.40GHz",
+                "gpu": "AMD Radeon HD 7900",
+                "machine": "vspm9",
+                "os": "Linux 3.19.0-21-generic",
+                "python": "3.4",
+                "ram": "12264472"
+            },
+            {
+                "arch": "x86_64",
+                "branch": "master",
+                "cpu": "Intel(R) Core(TM) i7-3770 CPU @ 3.40GHz",
+                "gpu": "AMD Radeon R9 200",
+                "machine": "vspm9-win",
+                "os": "Windows 8",
+                "python": "3.4",
+                "ram": "16381544"
+            },
+            {
+                "arch": "x86_64",
+                "branch": "master",
+                "cpu": "Intel(R) Core(TM) i5-4670K CPU @ 3.40GHz",
+                "gpu": "NVIDIA GTX 680",
+                "machine": "vspm58",
+                "os": "Linux 3.13.0-54-generic",
+                "python": "3.4",
+                "ram": "16381544"
+            },
+            {
+                "arch": "x86_64",
+                "branch": "master",
+                "cpu": "AMD Phenom(tm) II X6 1090T Processor",
+                "gpu": "AMD Radeon HD 7990",
+                "machine": "vsp-fah",
+                "os": "Linux 3.16.0-41-generic",
+                "python": "3.4",
+                "ram": "8175320"
+            }
+        ],
+        "pme.track_opencl": [
+            {
+                "arch": "x86_64",
+                "branch": "master",
+                "cpu": "AMD Phenom(tm) II X6 1090T Processor",
+                "gpu": "NVIDIA GTX 780",
+                "machine": "vsp-fah-nvidia",
+                "os": "Linux 3.16.0-41-generic",
+                "python": "3.4",
+                "ram": "8175320"
+            },
+            {
+                "arch": "x86_64",
+                "branch": "master",
+                "cpu": "Intel(R) Core(TM) i5-4670K CPU @ 3.40GHz",
+                "gpu": "NVIDIA GTX 680",
+                "machine": "vspm58",
+                "os": "Linux 3.13.0-54-generic",
+                "python": "3.4",
+                "ram": "16381544"
+            },
+            {
+                "arch": "x86_64",
+                "branch": "master",
+                "cpu": "Intel(R) Core(TM) i7-3770 CPU @ 3.40GHz",
+                "gpu": "AMD Radeon HD 7900",
+                "machine": "vspm9",
+                "os": "Linux 3.19.0-21-generic",
+                "python": "3.4",
+                "ram": "12264472"
+            },
+            {
+                "arch": "x86_64",
+                "branch": "master",
+                "cpu": "AMD Phenom(tm) II X6 1090T Processor",
+                "gpu": "AMD Radeon HD 7990",
+                "machine": "vsp-fah",
+                "os": "Linux 3.16.0-41-generic",
+                "python": "3.4",
+                "ram": "8175320"
+            },
+            {
+                "arch": "x86_64",
+                "branch": "master",
+                "cpu": "Intel(R) Core(TM) i7-3770 CPU @ 3.40GHz",
+                "gpu": "AMD Radeon R9 200",
+                "machine": "vspm9-win",
+                "os": "Windows 8",
+                "python": "3.4",
+                "ram": "16381544"
+            }
+        ]
+    },
+    "machines": {
+        "vsp-fah": {
+            "arch": "x86_64",
+            "cpu": "AMD Phenom(tm) II X6 1090T Processor",
+            "gpu": "AMD Radeon HD 7990",
+            "machine": "vsp-fah",
+            "os": "Linux 3.16.0-41-generic",
+            "ram": "8175320",
+            "version": 1
+        },
+        "vsp-fah-nvidia": {
+            "arch": "x86_64",
+            "cpu": "AMD Phenom(tm) II X6 1090T Processor",
+            "gpu": "NVIDIA GTX 780",
+            "machine": "vsp-fah-nvidia",
+            "os": "Linux 3.16.0-41-generic",
+            "ram": "8175320",
+            "version": 1
+        },
+        "vspm58": {
+            "arch": "x86_64",
+            "cpu": "Intel(R) Core(TM) i5-4670K CPU @ 3.40GHz",
+            "gpu": "NVIDIA GTX 680",
+            "machine": "vspm58",
+            "os": "Linux 3.13.0-54-generic",
+            "ram": "16381544",
+            "version": 1
+        },
+        "vspm9": {
+            "arch": "x86_64",
+            "cpu": "Intel(R) Core(TM) i7-3770 CPU @ 3.40GHz",
+            "gpu": "AMD Radeon HD 7900",
+            "machine": "vspm9",
+            "os": "Linux 3.19.0-21-generic",
+            "ram": "12264472",
+            "version": 1
+        },
+        "vspm9-win": {
+            "arch": "x86_64",
+            "cpu": "Intel(R) Core(TM) i7-3770 CPU @ 3.40GHz",
+            "gpu": "AMD Radeon R9 200",
+            "machine": "vspm9-win",
+            "os": "Windows 8",
+            "ram": "16381544",
+            "version": 1
+        }
+    },
+    "params": {
+        "arch": [
+            "x86_64"
+        ],
+        "branch": [
+            "master"
+        ],
+        "cpu": [
+            "AMD Phenom(tm) II X6 1090T Processor",
+            "Intel(R) Core(TM) i5-4670K CPU @ 3.40GHz",
+            "Intel(R) Core(TM) i7-3770 CPU @ 3.40GHz"
+        ],
+        "gpu": [
+            "AMD Radeon HD 7900",
+            "AMD Radeon HD 7990",
+            "AMD Radeon R9 200",
+            "NVIDIA GTX 680",
+            "NVIDIA GTX 780"
+        ],
+        "machine": [
+            "vsp-fah",
+            "vsp-fah-nvidia",
+            "vspm58",
+            "vspm9",
+            "vspm9-win"
+        ],
+        "os": [
+            "Linux 3.13.0-54-generic",
+            "Linux 3.16.0-41-generic",
+            "Linux 3.19.0-21-generic",
+            "Windows 8"
+        ],
+        "python": [
+            "3.4"
+        ],
+        "ram": [
+            "12264472",
+            "16381544",
+            "8175320"
+        ]
+    },
+    "project": "OpenMM",
+    "project_url": "http://openmm.org/",
+    "show_commit_url": "http://github.com/pandegroup/openmm/commit/",
+    "tags": {
+        "5.2": 1379611896000,
+        "6.0": 1392054671000,
+        "6.0.1": 1399411244000,
+        "6.1": 1408646018000,
+        "6.2": 1417727316000,
+        "6.2beta1": 1415321849000,
+        "6.2rc1": 1417033081000,
+        "6.2rc2": 1417727316000,
+        "6.3beta1": 1433368401000
+    }
+}
